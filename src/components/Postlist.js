@@ -7,13 +7,13 @@ function Postlist() {
     const [dataArray, setDataArray] = useState([]);
 
     useEffect(()=>{
-        fetch("https://localhost:8050/posts")
+        fetch("http://localhost:8050/postgetData")
         .then(res => res.json())
         .then((data) => {
             console.log(data);
             setDataArray(data);
         })
-    })
+    },[])
   return (
     <div>
       {dataArray.map((element) =>(
