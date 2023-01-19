@@ -16,9 +16,17 @@ function Postlist() {
     })
   return (
     <div>
-      {/* {dataArray.map((element) =>(
-        <Post/>
-      ))} */}
+      {dataArray.map((element) =>(
+        <Post 
+        id={element._id}
+        title={element.title}
+        description={element.description}
+        writtenby={element.writtenBy}
+        posttime={element.timestamp}
+        noOfLike={element.like}
+        noOfDislike={element.dislike}
+        />
+      ))}
       
     </div>
   )
